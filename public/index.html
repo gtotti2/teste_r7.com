@@ -1,14 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
 
-    <title>R7 FrontEnd Test</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>R7 FrontEnd Test</title>
+  <link rel="stylesheet" href="./stylesheets/style.css" media="all">
+</head>
 
-    <link rel="stylesheet" href="stylesheets/style.css" media="all">
-  </head>
-  <body>
-      <!-- let's code :D -->
+<body>
+  <div id="app" data-url="fazenda.json">
+    <h1><img src="./images/a-fazenda-logo.png" alt="A fazenda"> <span>Ranking</span></h1>
+    <ul class="ranking">
 
-    <script src="javascripts/main.js"></script> 
+    </ul>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./javascripts/main.js"></script>
+</body>
+
 </html>
