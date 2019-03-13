@@ -1,7 +1,15 @@
-var app         = require('connect')()
-var serveStatic = require('serve-static')
+var express = require("express");
+var bodyParser = require("body-parser");
+var routes = require("./public/routes.js");
+var app = express();
 
-app.use(serveStatic('public'))
 
-console.log(' ➜   Open: http://localhost:7007')
-app.listen(7007)
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+routes(app);
+
+var server = app.listen(3000, function () {
+    console.log("app running on port.", server.address().port);
+});
